@@ -1,0 +1,61 @@
+<footer class="footer">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-5 mt-2">
+                <img class="logo-img" height="30" src="../../assets/vdflogo.png" alt="VDF">
+                <ul class="list-unstyled mt-4">
+                    <li class="my-1">
+                        <i class="zmdi zmdi-pin zmdi-hc-lg mr-2"></i>
+                        <span>Cù lao cốc, 54 Nguyễn Lương Bằng, Liên Chiểu, Đà Nẵng</span>
+                    </li>
+                    <li class="my-1">
+                        <i class="zmdi zmdi-phone zmdi-hc-lg mr-2"></i>
+                        <span>0123456789 (Mr.Man) - 0987654321 (Mrs.Woman)</span>
+                    </li>
+                    <li class="my-1">
+                        <i class="zmdi zmdi-email zmdi-hc-lg mr-2"></i>
+                        <span>ungho@vdf.net</span>
+                    </li>
+                </ul>
+                <ul class="list-unstyled mt-4 d-flex">
+
+                </ul>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-sm-4 mt-2">
+                        <h5 class="text-primary">VỀ CHÚNG TÔI</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'about' %}">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 mt-2">
+                        <h5 class="text-primary">HỖ TRỢ</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'faqs' %}">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'faq' %}">Gửi ý kiến phản hồi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 mt-2">
+                        <select name="language" id="app-language" class="form-control">
+                            <option value="/?language=vi">Tiếng Việt</option>
+                            <option value="/?language=en">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-4">
+        <span class="copyright-text">&copy; Copyright 2020 VDF All Rights Reserved</span>
+    </div>
+</footer>
