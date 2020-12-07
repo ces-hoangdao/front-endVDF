@@ -5,6 +5,7 @@ import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
 import {HomepageComponent} from './homepage/homepage.component'
 import {ProjectDetailComponent} from './project-detail/project-detail.component'
+import {CreateCampaignComponent} from './create-campaign/create-campaign.component'
 
 
 
@@ -30,6 +31,10 @@ const routes: Routes = [
     path: 'projectdetail',
     component: ProjectDetailComponent
   },
+  {
+    path: 'create-campaign',
+    component: CreateCampaignComponent
+  }
   
 ];
 

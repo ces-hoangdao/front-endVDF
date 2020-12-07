@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { CreateCampaignComponent } from './create-campaign/create-campaign.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     SigninComponent,
     HomepageComponent,
     ProjectDetailComponent,
+    CreateCampaignComponent,
     
   ],
   imports: [
