@@ -15,6 +15,7 @@ import { CreateCampaignComponent } from './create-campaign/create-campaign.compo
 import { IntroduceComponent } from './introduce/introduce.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { IntroduceComponent } from './introduce/introduce.component';
     ProjectDetailComponent,
     CreateCampaignComponent,
     IntroduceComponent,
+    
     
   ],
   imports: [
