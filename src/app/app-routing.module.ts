@@ -12,6 +12,7 @@ import {ExploreComponent} from './explore/explore.component';
 import {ContactComponent} from './contact/contact.component';
 import {FaqsComponent} from './faqs/faqs.component';
 import {DonateComponent} from './donate/donate.component';
+import {AdminpageComponent} from './adminpage/adminpage.component';
 
 
 
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path:'donate',
     component:DonateComponent
+  },
+  {
+    path: 'admin',
+    component: AdminpageComponent
   }
 
   

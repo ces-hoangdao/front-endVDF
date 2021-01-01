@@ -17,6 +17,8 @@ import { ExploreComponent } from './explore/explore.component';
 import { DonateComponent } from './donate/donate.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { NavComponent } from './nav/nav.component';
 
 
 
@@ -37,6 +39,8 @@ import { ContactComponent } from './contact/contact.component';
     ExploreComponent,
     DonateComponent,
     FaqsComponent,
+    AdminpageComponent,
+    NavComponent,
     
     
     
