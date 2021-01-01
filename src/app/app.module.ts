@@ -14,6 +14,9 @@ import { CreateCampaignComponent } from './create-campaign/create-campaign.compo
 import { IntroduceComponent } from './introduce/introduce.component';
 import { AboutComponent } from './about/about.component';
 import { ExploreComponent } from './explore/explore.component';
+import { DonateComponent } from './donate/donate.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -32,6 +35,9 @@ import { ExploreComponent } from './explore/explore.component';
     IntroduceComponent,
     AboutComponent,
     ExploreComponent,
+    DonateComponent,
+    FaqsComponent,
+    
     
     
   ],

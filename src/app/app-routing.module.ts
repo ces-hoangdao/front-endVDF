@@ -9,6 +9,9 @@ import {CreateCampaignComponent} from './create-campaign/create-campaign.compone
 import {ArticlesComponent} from './articles/articles.component';
 import {AboutComponent} from './about/about.component';
 import {ExploreComponent} from './explore/explore.component';
+import {ContactComponent} from './contact/contact.component';
+import {FaqsComponent} from './faqs/faqs.component';
+import {DonateComponent} from './donate/donate.component';
 
 
 
@@ -49,7 +52,20 @@ const routes: Routes = [
   {
     path: 'explore',
     component: ExploreComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path:'faqs',
+    component: FaqsComponent
+  },
+  {
+    path:'donate',
+    component:DonateComponent
   }
+
   
   
 ];
