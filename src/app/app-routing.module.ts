@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
-import {HomepageComponent} from './homepage/homepage.component'
-import {ProjectDetailComponent} from './project-detail/project-detail.component'
-import {CreateCampaignComponent} from './create-campaign/create-campaign.component'
-import {ArticlesComponent} from './articles/articles.component'
+import {HomepageComponent} from './homepage/homepage.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {CreateCampaignComponent} from './create-campaign/create-campaign.component';
+import {ArticlesComponent} from './articles/articles.component';
+import {AboutComponent} from './about/about.component';
+import {ExploreComponent} from './explore/explore.component';
 
 
 
@@ -39,6 +41,14 @@ const routes: Routes = [
   {
     path: 'articles',
     component: ArticlesComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'explore',
+    component: ExploreComponent
   }
   
   
