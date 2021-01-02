@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,  } from '@angular/router';
 import { AppComponent } from './app.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
@@ -13,6 +13,8 @@ import {ContactComponent} from './contact/contact.component';
 import {FaqsComponent} from './faqs/faqs.component';
 import {DonateComponent} from './donate/donate.component';
 import {AdminpageComponent} from './adminpage/adminpage.component';
+import { AdminCampaignComponent } from './adminpage/admin-campaign/admin-campaign.component';
+import { AdminInfoComponent } from './adminpage/admin-info/admin-info.component';
 
 
 
@@ -24,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-     component: HomepageComponent
+    component: HomepageComponent
   },
   {
     path: 'login',
@@ -69,6 +71,14 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminpageComponent
+  },
+  {
+    path:'campaign',
+    component: AdminCampaignComponent
+  },
+  {
+    path: 'info',
+    component: AdminInfoComponent
   }
 
   

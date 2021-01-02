@@ -1,7 +1,6 @@
 <section class="my-2 container">
     <h1 class="mb-4">Tạo chiến dịch mới</h1>
-    <form method="POST" action=""
-        accept-charset="UTF-8" id="campaign-form" enctype="multipart/form-data">
+    <form [formGroup]="campaign" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
         <div class="alert alert-danger" id="error-box" hidden>
             <ul class="list-unstyled mb-0">
             </ul>
@@ -156,8 +155,7 @@
             </div>
         </div>
     </form>
-    <form method="POST" action="https://kindmate.net/admin/organization"
-        accept-charset="UTF-8" id="form-organization"
+    <form  [formGroup]="campaign" (ngSubmit)="onSubmit()"
         enctype="multipart/form-data"><input name="_token" type="hidden"
             value="E4PL4GpqcuX9oLPDH7EtiIgFHQYJt2v6zTukfOAv">
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"

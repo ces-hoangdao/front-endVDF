@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-donate',
   templateUrl: './donate.component.html',
@@ -11,5 +11,10 @@ export class DonateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  donation = new FormGroup({
+    
+  });
+  onSubmit(){
+    
+  }
 }

@@ -63,8 +63,7 @@
                 <div class="col-lg-9">
                     <div class="card card-shadow p-3 p-md-4">
                         <h2 class="mb-4">Ủng hộ chiến dịch</h2>
-                        <form action="https://kindmate.net/donate/1328"
-                            method="POST">
+                        <form [formGroup]="donation" (ngSubmit)="onSubmit()">
                             <input type="hidden" name="_token"
                                 value="zUr3HZlRV3XiFb4mD8ArnKLvp79ew19hH6IwvlL9">
                             <div class="select-payment">
