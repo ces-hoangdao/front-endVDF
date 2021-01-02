@@ -26,7 +26,11 @@ export class SigninComponent implements OnInit {
       
       window.location.replace('/home')
       //this.router.navigate(['/home'])
-    })
+    },
+    (error) => {
+     alert('LOGIN FAILED');
+   }
+    )
     
   }
   

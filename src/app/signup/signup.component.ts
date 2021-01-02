@@ -27,7 +27,12 @@ export class SignupComponent implements OnInit {
     .then((user)=>{
       alert(user.message)
       this.router.navigate(['/login'])
-    })
+    },
+    
+     (error) => {
+      alert('SIGNUP_ERROR');
+    }
+    )
     
   }
 }
