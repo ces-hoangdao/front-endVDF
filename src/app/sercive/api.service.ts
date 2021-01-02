@@ -56,9 +56,7 @@ export class apiService {
   
 
   logout = () => {
-    localStorage.removeItem('user');
-    localStorage.removeItem('email');
-
+    localStorage.clear();
     window.location.reload();
   };
 }

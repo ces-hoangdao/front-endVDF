@@ -33,9 +33,10 @@
                 </ul>
             </div>
             <ng-template #templateName>
-                <button class="btn" type="submit" (ngSubmit)="onSubmit()">Logout</button>
+                <form [formGroup]="logout" (ngSubmit)="onSubmit()">
+                    <button class="btn" type="submit" >Logout</button>
+                </form>
             </ng-template>
-            
         </div>
     </nav>
 </div>

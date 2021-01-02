@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  {apiService} from '../sercive/api.service';
-import { CommonModule } from '@angular/common';  
+import { FormGroup, FormControl } from '@angular/forms'; 
 import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-nav',
@@ -12,7 +12,11 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+  logout = new FormGroup({
+  
+  });
   currentUser = localStorage.getItem("username")
   
   onSubmit() {
