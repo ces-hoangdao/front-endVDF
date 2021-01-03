@@ -1,0 +1,13 @@
+.btn{
+    border-radius: 2rem;
+    margin-left: 9px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: #FF4D5F;
+    border-color: #FF4D5F;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #654AD2;
+    border-color: #654AD2;
+}

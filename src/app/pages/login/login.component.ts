@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
                 // login successful
                 localStorage.setItem('user', this.model.username);
                 localStorage.setItem('token', result.accessToken);
-                this.router.navigate(['/']);
+                this.router.navigate(['/admin']);
             } else {
                 // login failed
                 this.error = 'Username or password is incorrect';

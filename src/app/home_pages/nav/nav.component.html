@@ -1,0 +1,42 @@
+<div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" routerlink="/">
+            <img src="../../assets/vdflogo.png" alt="VDF" width="60" height="30"
+                class="d-inline-block align-top" alt="VDF" loading="lazy">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/explore">Các chiến dịch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/articles">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">Về chúng tôi</a>
+                </li>
+            </ul>
+            <div *ngIf="!currentUser; else templateName">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" routerLink="/login"
+                            routerLinkActive="active">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/signup"
+                            routerLinkActive="active">Tạo Tài Khoản</a>
+                    </li>
+                </ul>
+            </div>
+            <ng-template #templateName>
+                <form [formGroup]="logout" (ngSubmit)="onSubmit()">
+                    <button class="btn" type="submit" >Logout</button>
+                </form>
+            </ng-template>
+        </div>
+    </nav>
+</div>

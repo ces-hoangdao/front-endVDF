@@ -1,0 +1,57 @@
+<main class="py-5">
+    <section id="auth-container" class="py-2">
+        <div class="container">
+            <div class="top-introduce py-2">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <article class="w-100">
+                            <div class="card card-shadow">
+                                <div class="card-body p-4">
+                                    <h3 class="mb-3">Register</h3>
+                                    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input id="email" type="text"
+                                                placeholder="Email"
+                                                class="form-control"
+                                                formControlName="email" 
+                                                required autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input id="username" type="text"
+                                                placeholder="UserName"
+                                                class="form-control"
+                                                formControlName="username" 
+                                                required autofocus>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input id="password" type="password"
+                                                placeholder="Password"
+                                                class="form-control"
+                                                formControlName="password" required>
+                                        </div>
+                                        
+    
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn
+                                                btn-primary">
+                                                Register
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <img width="100%" class="my-3"
+                            src="../../assets/donation.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

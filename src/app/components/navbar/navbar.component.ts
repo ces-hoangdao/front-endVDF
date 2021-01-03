@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   constructor(location: Location,  private element: ElementRef, private router: Router, private authService: AuthService) {
     this.location = location;
     this.user = {
-      userName: localStorage.getItem("user"),
+      userName: localStorage.getItem("username"),
     }
   }
 

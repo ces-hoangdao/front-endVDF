@@ -6,15 +6,26 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, 
+    redirectTo:'home',
+    pathMatch: 'full'
+  },
   {
     path: '',
+    component: HomeLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: './layouts/home-layout/home-layout.module#HomeLayoutModule'
+      }
+    ]
+  }, 
+  {
+    path: 'admin',
     component: AdminLayoutComponent,
     canActivate: [AuthGuard],
     children: [
@@ -25,18 +36,8 @@ const routes: Routes =[
     ]
   }, 
   {
-    path: '',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './layouts/auth-layout/auth-layout.module#AuthLayoutModule'
-      }
-    ]
-  }, 
-  {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'home'
   }
 ];
 
@@ -48,7 +49,6 @@ const routes: Routes =[
       useHash: false
     })
   ],
-  exports: [
-  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
