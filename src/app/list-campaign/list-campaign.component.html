@@ -1,7 +1,7 @@
 <section id="list-campaign" class="pb-5">
     <div class="container">
         <div class="row list-campaigns">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let campaign of listCampaign; index as i">
                 <article class="card campaign-style2 mb-4">
                     <div class="embed-responsive embed-responsive-16by9">
                         <img class="embed-responsive-item" src="../../assets/mientrung.jpg"/>
@@ -16,19 +16,11 @@
                                     src="../../assets/vdflogo.png"
                                     alt="vnsoundmusic">
                             </div>
-                            <a routerLink = "/projectdetail">
-                                <h6 class="card-title mt-3 mb-2 text-body">Thương
-                                    Về Miền Trung</h6>
+                            <a [routerLink] = "['/projectdetail', campaign._id]" >
+                                <h6 class="card-title mt-3 mb-2 text-body">{{campaign.name}}</h6>
                             </a>
                             <div class="card-text text-secondary">
-                                Những ngày qua, thiệt hại do những cơn mưa lũ
-                                liên tiếp gây ra đối với bà con Miền Trung khiến
-                                cả nước xót xa. Tính đến tối 19/10, mưa lũ đã
-                                làm trên 122 người chết và mất tích, gần 600
-                                ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                                135.000 hộ dân tại trên 200 xã, phường của các
-                                tỉnh, thành phố, đặc biệt tại Thừa Thiên Huế,
-                                Quảng Bình, Quảng Trị, Quảng Nam và Đà Nẵng.
+                                {{campaign.shortDescription}}
                             </div>
                             <div class="card-text card-author mt-1">
                                 <span class="text-secondary">bởi</span>
@@ -46,178 +38,7 @@
                             </div>
                             <div class="campaign-info text-right">
                                 <div class="campaign-money">
-                                    <span>40,000,000 đ</span>
-                                </div>
-                                <div class="campaign-deadline">
-                                    <span class="small text-secondary">
-                                        Còn lại 73 ngày
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <article class="card campaign-style2 mb-4">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img class="embed-responsive-item" src="../../assets/mientrung.jpg"/>
-                    </div>
-                    <div class="card-body pb-3 d-flex flex-column
-                        align-items-start">
-                        <div class="campaign-main-info mb-auto w-100">
-                            <div class="campaign-badge-box d-flex
-                                justify-content-between align-items-center">
-                                <img width="50" height="50" class="mr-2 avatar
-                                    bg-white img-fill"
-                                    src="../../assets/vdflogo.png"
-                                    alt="vnsoundmusic">
-                            </div>
-                            <a routerLink = "/projectdetail">
-                                <h6 class="card-title mt-3 mb-2 text-body">Thương
-                                    Về Miền Trung</h6>
-                            </a>
-                            <div class="card-text text-secondary">
-                                Những ngày qua, thiệt hại do những cơn mưa lũ
-                                liên tiếp gây ra đối với bà con Miền Trung khiến
-                                cả nước xót xa. Tính đến tối 19/10, mưa lũ đã
-                                làm trên 122 người chết và mất tích, gần 600
-                                ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                                135.000 hộ dân tại trên 200 xã, phường của các
-                                tỉnh, thành phố, đặc biệt tại Thừa Thiên Huế,
-                                Quảng Bình, Quảng Trị, Quảng Nam và Đà Nẵng.
-                            </div>
-                            <div class="card-text card-author mt-1">
-                                <span class="text-secondary">bởi</span>
-                                <a href="javascript:void(0)"
-                                    class="campaign-author-link"> 16PFIEV3</a>
-                            </div>
-                            
-                        </div>
-                        <div class="d-flex justify-content-between
-                            align-items-center mt-3 pt-3 border-top w-100">
-                            <div class="process-style d-flex
-                                justify-content-between align-items-center">
-                                <div class="progress-circle progress-5"></div>
-                                <span class = "campaign-percent-text">0%</span>
-                            </div>
-                            <div class="campaign-info text-right">
-                                <div class="campaign-money">
-                                    <span>40,000,000 đ</span>
-                                </div>
-                                <div class="campaign-deadline">
-                                    <span class="small text-secondary">
-                                        Còn lại 73 ngày
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <article class="card campaign-style2 mb-4">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img class="embed-responsive-item" src="../../assets/mientrung.jpg"/>
-                    </div>
-                    <div class="card-body pb-3 d-flex flex-column
-                        align-items-start">
-                        <div class="campaign-main-info mb-auto w-100">
-                            <div class="campaign-badge-box d-flex
-                                justify-content-between align-items-center">
-                                <img width="50" height="50" class="mr-2 avatar
-                                    bg-white img-fill"
-                                    src="../../assets/vdflogo.png"
-                                    alt="vnsoundmusic">
-                            </div>
-                            <a routerLink = "/projectdetail">
-                                <h6 class="card-title mt-3 mb-2 text-body">Thương
-                                    Về Miền Trung</h6>
-                            </a>
-                            <div class="card-text text-secondary">
-                                Những ngày qua, thiệt hại do những cơn mưa lũ
-                                liên tiếp gây ra đối với bà con Miền Trung khiến
-                                cả nước xót xa. Tính đến tối 19/10, mưa lũ đã
-                                làm trên 122 người chết và mất tích, gần 600
-                                ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                                135.000 hộ dân tại trên 200 xã, phường của các
-                                tỉnh, thành phố, đặc biệt tại Thừa Thiên Huế,
-                                Quảng Bình, Quảng Trị, Quảng Nam và Đà Nẵng.
-                            </div>
-                            <div class="card-text card-author mt-1">
-                                <span class="text-secondary">bởi</span>
-                                <a href="javascript:void(0)"
-                                    class="campaign-author-link"> 16PFIEV3</a>
-                            </div>
-                            
-                        </div>
-                        <div class="d-flex justify-content-between
-                            align-items-center mt-3 pt-3 border-top w-100">
-                            <div class="process-style d-flex
-                                justify-content-between align-items-center">
-                                <div class="progress-circle progress-5"></div>
-                                <span class = "campaign-percent-text">0%</span>
-                            </div>
-                            <div class="campaign-info text-right">
-                                <div class="campaign-money">
-                                    <span>40,000,000 đ</span>
-                                </div>
-                                <div class="campaign-deadline">
-                                    <span class="small text-secondary">
-                                        Còn lại 73 ngày
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <article class="card campaign-style2 mb-4">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <img class="embed-responsive-item" src="../../assets/mientrung.jpg"/>
-                    </div>
-                    <div class="card-body pb-3 d-flex flex-column
-                        align-items-start">
-                        <div class="campaign-main-info mb-auto w-100">
-                            <div class="campaign-badge-box d-flex
-                                justify-content-between align-items-center">
-                                <img width="50" height="50" class="mr-2 avatar
-                                    bg-white img-fill"
-                                    src="../../assets/vdflogo.png"
-                                    alt="vnsoundmusic">
-                            </div>
-                            <a routerLink = "/projectdetail">
-                                <h6 class="card-title mt-3 mb-2 text-body">Thương
-                                    Về Miền Trung</h6>
-                            </a>
-                            <div class="card-text text-secondary">
-                                Những ngày qua, thiệt hại do những cơn mưa lũ
-                                liên tiếp gây ra đối với bà con Miền Trung khiến
-                                cả nước xót xa. Tính đến tối 19/10, mưa lũ đã
-                                làm trên 122 người chết và mất tích, gần 600
-                                ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                                135.000 hộ dân tại trên 200 xã, phường của các
-                                tỉnh, thành phố, đặc biệt tại Thừa Thiên Huế,
-                                Quảng Bình, Quảng Trị, Quảng Nam và Đà Nẵng.
-                            </div>
-                            <div class="card-text card-author mt-1">
-                                <span class="text-secondary">bởi</span>
-                                <a href="javascript:void(0)"
-                                    class="campaign-author-link"> 16PFIEV3</a>
-                            </div>
-                            
-                        </div>
-                        <div class="d-flex justify-content-between
-                            align-items-center mt-3 pt-3 border-top w-100">
-                            <div class="process-style d-flex
-                                justify-content-between align-items-center">
-                                <div class="progress-circle progress-5"></div>
-                                <span class = "campaign-percent-text">0%</span>
-                            </div>
-                            <div class="campaign-info text-right">
-                                <div class="campaign-money">
-                                    <span>40,000,000 đ</span>
+                                    <span>{{campaign.goal}} đ</span>
                                 </div>
                                 <div class="campaign-deadline">
                                     <span class="small text-secondary">

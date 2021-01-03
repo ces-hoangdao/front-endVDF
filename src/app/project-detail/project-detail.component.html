@@ -4,14 +4,9 @@
             <div class="col-lg-10">
                 <div class="media">
                     <div class="media-body">
-                        <h1 class="mt-0 font-weight-normal">Thương Về Miền Trung</h1>
-                        <p class="mb-1 text-secondary">Những ngày qua, thiệt hại
-                            do những cơn mưa lũ liên tiếp gây ra đối với bà con
-                            Miền Trung khiến cả nước xót xa. Tính đến tối 19/10,
-                            mưa lũ đã làm trên 122 người chết và mất tích, gần
-                            600 ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                            135.000 hộ dân.
-
+                        <h1 class="mt-0 font-weight-normal">{{campaignData.name}}</h1>
+                        <p class="mb-1 text-secondary">
+                            {{campaignData.shortDescription}}
                         </p>
                     </div>
                 </div>
@@ -56,7 +51,7 @@
                                 align-items-end">
                                 <h4 class="text-primary mb-0 h3">100,000 đ
                                     <small>0%</small></h4>
-                                <span>40,000,000 đ vnđ</span>
+                                <span>{{campaignData.goal}} đ vnđ</span>
                             </div>
                             <div class="progress my-2">
                                 <div class="progress-bar"
@@ -75,7 +70,7 @@
                             </div>
                         </div>
                         <div class="my-4">
-                            <a routerLink = '/donate' class="btn btn-danger
+                            <a [routerLink] = "['/donate', campaignData._id]" class="btn btn-danger
                                 btn-lg btn-block">Ủng hộ ngay</a>
                             <div class="divider"></div>
                             <a
@@ -237,35 +232,7 @@
                 <div id="campaign-content">
                     <h3 class="my-3 font-weight-bold h3">Nội dung chiến dịch</h3>
                     <p><span style="color: rgb(28, 30, 33);">
-                            Những ngày qua, thiệt hại do những cơn mưa lũ liên
-                            tiếp gây ra đối với bà con Miền Trung khiến cả nước
-                            xót xa. Tính đến tối 19/10, mưa lũ đã làm trên 122
-                            người chết và mất tích, gần 600 ngôi nhà bị sập đổ,
-                            cuốn trôi; ảnh hưởng trên 135.000 hộ dân tại trên
-                            200 xã, phường của các tỉnh, thành phố, đặc biệt tại
-                            Thừa Thiên Huế, Quảng Bình, Quảng Trị, Quảng Nam và
-                            Đà Nẵng.
-
-                            Nhiều công trình cơ sở hạ tầng giao thông, thuỷ lợi
-                            bị sạt lở, vùi lấp; hàng chục nghìn ha diện tích
-                            nông nghiệp bị ngập lụt; bao gia đình lâm vào cảnh
-                            tang thương, nhiều người bị mất tích, thiệt mạng
-                            thậm chí nhiều cán bộ chiến sĩ đã anh dũng hy sinh
-                            trong công tác cứu hộ, cứu nạn. Hướng về miền Trung
-                            ruột thịt,
-
-                            Chúng tôi kêu gọi sự ủng hộ của quý đọc giả nhằm
-                            đồng hành, chia sẻ khó khăn, khắc phục các thiệt hại
-                            do lũ lụt cùng đồng bào Miền Trung với tinh thần
-                            “tương thân tương ái”, “lá lành đùm lá rách”.
-
-
-
-                            Trước tình hình đó, người dân trên mọi miền đất nước
-                            đều đồng lòng hướng về miền Trung ruột thịt. Ai có
-                            gì góp nấy, những lời kêu gọi quyên góp tiền, lương
-                            thực, thực phẩm,... đều được người dân đồng lòng ủng
-                            hộ.
+                            {{campaignData.fullDescription}}
                         </span></p>
                 </div>
 
@@ -281,15 +248,15 @@
                 <div class="my-3">
                     <table class="table table-block">
                         <tbody>
-                            <tr>
+                            <tr *ngFor="let donationItem of campaignData.donation; index as i">
                                 <td>
                                     <div class="media">
                                         <img
                                             src="https://kindmate.net/svg/payment.svg"
                                             alt="kindmate-payment-type"> <div
                                             class="media-body ml-3">
-                                            <h6 class="mb-1">Đào Việt Hoàng</h6>
-                                            <p class="mb-1">Đào Việt Hoàng ủng
+                                            <h6 class="mb-1">{{donationItem.user.userName}}</h6>
+                                            <p class="mb-1">{{donationItem.user.userName}} ủng
                                                 hộ
                                                 chiến dịch</p> <p class="small
                                                 text-secondary mb-0">
@@ -300,7 +267,7 @@
                                     </div>
                                 </td>
                                 <td class="text-right">
-                                    <strong class="text-primary white-space">100,000
+                                    <strong class="text-primary white-space">{{donationItem.amount}}
                                         VNĐ</strong>
                                 </td>
                             </tr>
