@@ -37,7 +37,7 @@ export class DonateComponent implements OnInit {
       { headers: { 'Authorization': `Bearer ` + localStorage.getItem('token') } }
     )
     .then(resp => {
-      alert(resp.data)
+      this.router.navigate(['/thankyou'])
     })
     .catch(err => {
         // Handle Error Here

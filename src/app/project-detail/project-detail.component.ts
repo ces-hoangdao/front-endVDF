@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../sercive/data-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import axios from 'axios';
 

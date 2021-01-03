@@ -13,10 +13,12 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   user = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
+
   onSubmit() {
     console.warn(this.user.value.username);
     console.warn(this.user.value.password);
