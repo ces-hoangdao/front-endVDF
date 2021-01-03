@@ -26,6 +26,10 @@ export class DonateComponent implements OnInit {
   }
 
   onSubmit(){
+    if (!localStorage.getItem('token')) {
+      this.router.navigate(['/login']);
+      return;
+    }
     let donationData = {
       campaign: this.campaignData._id,
       message: this.donation.value.message,

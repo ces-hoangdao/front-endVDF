@@ -33,6 +33,9 @@
                 </ul>
             </div>
             <ng-template #templateName>
+                <div style="display: inline-block; margin-right: 0.5em;">
+                    {{ currentUser }}
+                </div>
                 <form [formGroup]="logout" (ngSubmit)="onSubmit()">
                     <button class="btn" type="submit" >Logout</button>
                 </form>
