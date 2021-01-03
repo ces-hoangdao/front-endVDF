@@ -1,0 +1,226 @@
+
+.payment-box {
+  background-color: #f3f3f3;
+  line-height: 14px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.payment-box label {
+  cursor: pointer;
+}
+
+.payment-box img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.payment-box.active {
+  background-color: #EFECFB;
+  color: #654AD2;
+  position: relative;
+}
+
+.payment-box.active img {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.payment-box.active::after {
+  content: '\F269';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 18px !important;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+i.VISA,
+i.MASTE,
+i.AMREX,
+i.JCB,
+i.VCB,
+i.TCB,
+i.MB,
+i.VIB,
+i.ICB,
+i.EXB,
+i.ACB,
+i.HDB,
+i.MSB,
+i.NVB,
+i.DAB,
+i.SHB,
+i.OJB,
+i.SEA,
+i.TPB,
+i.PGB,
+i.BIDV,
+i.AGB,
+i.SCB,
+i.VPB,
+i.VAB,
+i.GPB,
+i.SGB,
+i.NAB,
+i.BAB {
+  width: 80px;
+  height: 30px;
+  display: block;
+  background: url("../../assets/bank_logo.png") no-repeat;
+}
+
+i.MASTE {
+  background-position: 0px -31px;
+}
+
+i.AMREX {
+  background-position: 0px -62px;
+}
+
+i.JCB {
+  background-position: 0px -93px;
+}
+
+i.VCB {
+  background-position: 0px -124px;
+}
+
+i.TCB {
+  background-position: 0px -155px;
+}
+
+i.MB {
+  background-position: 0px -186px;
+}
+
+i.VIB {
+  background-position: 0px -217px;
+}
+
+i.ICB {
+  background-position: 0px -248px;
+}
+
+i.EXB {
+  background-position: 0px -279px;
+}
+
+i.ACB {
+  background-position: 0px -310px;
+}
+
+i.HDB {
+  background-position: 0px -341px;
+}
+
+i.MSB {
+  background-position: 0px -372px;
+}
+
+i.NVB {
+  background-position: 0px -403px;
+}
+
+i.DAB {
+  background-position: 0px -434px;
+}
+
+i.SHB {
+  background-position: 0px -465px;
+}
+
+i.OJB {
+  background-position: 0px -496px;
+}
+
+i.SEA {
+  background-position: 0px -527px;
+}
+
+i.TPB {
+  background-position: 0px -558px;
+}
+
+i.PGB {
+  background-position: 0px -589px;
+}
+
+i.BIDV {
+  background-position: 0px -620px;
+}
+
+i.AGB {
+  background-position: 0px -651px;
+}
+
+i.SCB {
+  background-position: 0px -682px;
+}
+
+i.VPB {
+  background-position: 0px -713px;
+}
+
+i.VAB {
+  background-position: 0px -744px;
+}
+
+i.GPB {
+  background-position: 0px -775px;
+}
+
+i.SGB {
+  background-position: 0px -806px;
+}
+
+i.NAB {
+  background-position: 0px -837px;
+}
+
+i.BAB {
+  background-position: 0px -868px;
+}
+
+ul.cardList li {
+  cursor: pointer;
+  float: left;
+  margin-right: 0;
+  margin: .5rem 0.75rem;
+  text-align: center;
+  width: 90px;
+}
+
+.footer {
+  line-height: 1.8;
+}
+
+.footer a {
+  color: #000000;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.media-body {
+  overflow: hidden;
+}
+.media-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.ml-2,
+.process-style .campaign-percent-text,
+.mx-2 {
+  margin-left: 0.5rem !important;
+}
+.p-3 {
+  padding: 1rem !important;
+}
