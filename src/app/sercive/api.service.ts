@@ -59,4 +59,5 @@ export class apiService {
     localStorage.clear();
     window.location.reload();
   };
+  
 }
