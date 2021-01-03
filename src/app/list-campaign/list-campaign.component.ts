@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import axios from 'axios';
 import { Observable } from 'rxjs';
+import { DataService } from '../sercive/data-service.service';
 
 @Component({
   selector: 'app-list-campaign',
@@ -10,9 +11,12 @@ import { Observable } from 'rxjs';
 })
 export class ListCampaignComponent implements OnInit {
   listCampaign = [];
-  constructor() { }
+  message = '';
 
+  constructor(private data: DataService) { }
+  
   ngOnInit(): void {
+    this.data.currentMessage.subscribe(message => this.message = message)
     this.fetchCampaigns()
   }
 
@@ -29,6 +33,10 @@ export class ListCampaignComponent implements OnInit {
 
   getRemainDays(expiredDate: Date): Number {
     return 0;
+  }
+
+  changeMessage(message: string): void {
+    this.data.changeMessage(message)
   }
 
 }

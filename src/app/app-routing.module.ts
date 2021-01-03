@@ -37,7 +37,7 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: 'projectdetail',
+    path: 'projectdetail/:campaignId',
     component: ProjectDetailComponent
   },
   {
@@ -65,7 +65,7 @@ const routes: Routes = [
     component: FaqsComponent
   },
   {
-    path:'donate',
+    path:'donate/:campaignId',
     component:DonateComponent
   },
   {

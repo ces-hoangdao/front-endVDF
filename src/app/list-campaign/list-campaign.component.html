@@ -16,7 +16,7 @@
                                     src="../../assets/vdflogo.png"
                                     alt="vnsoundmusic">
                             </div>
-                            <a routerLink = "/projectdetail">
+                            <a [routerLink] = "['/projectdetail', campaign._id]" >
                                 <h6 class="card-title mt-3 mb-2 text-body">{{campaign.name}}</h6>
                             </a>
                             <div class="card-text text-secondary">

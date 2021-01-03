@@ -17,16 +17,10 @@
                                 src="../../assets/vdflogo.png">
                         </div>
                         <a href="{% url 'project_detail' %}">
-                            <h6 class="card-title mt-3 mb-2 text-body">Thương Về
-                                Miền Trung</h6>
+                            <h6 class="card-title mt-3 mb-2 text-body">{{campaignData.name}}</h6>
                         </a>
                         <div class="card-text text-secondary">
-                            Những ngày qua, thiệt hại
-                            do những cơn mưa lũ liên tiếp gây ra đối với bà con
-                            Miền Trung khiến cả nước xót xa. Tính đến tối 19/10,
-                            mưa lũ đã làm trên 122 người chết và mất tích, gần
-                            600 ngôi nhà bị sập đổ, cuốn trôi; ảnh hưởng trên
-                            135.000 hộ dân.
+                            {{campaignData.shortDescription}}
 
                         </div>
                         <div class="card-text card-author mt-1">
@@ -46,7 +40,7 @@
                         </div>
                         <div class="campaign-info text-right">
                             <div class="campaign-money">
-                                <span>40,000,000 đ</span>
+                                <span>{{campaignData.goal}} đ</span>
                             </div>
                             <div class="campaign-deadline">
                                 <span class="small text-secondary">
@@ -135,11 +129,13 @@
                                 <div class="form-group">
                                     <label for="money">Số tiền</label>
                                     <div class="input-group input-group-lg">
-                                        <input type="text" name="money"
+                                        <input type="text" formControlName="amount"
+                                            required
                                             value="100000" id="money"
                                             class="form-control
                                             font-weight-bold"
-                                            required="true">
+                                            required="true"
+                                            >
                                         <div class="input-group-append">
                                             <span class="input-group-text
                                                 font-weight-bold">VNĐ</span>
@@ -149,7 +145,7 @@
                                 <div class="form-group">
                                     <label for="message">Lời nhắn của bạn</label>
                                     <textarea id="message" class="form-control"
-                                        rows="3" maxlength="1000" name="message"
+                                        rows="3" maxlength="1000" formControlName="message"
                                         cols="50"></textarea>
                                 </div>
                                 <div class="row">
