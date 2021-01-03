@@ -28,7 +28,8 @@ import { AdminMenuComponent } from './adminpage/admin-menu/admin-menu.component'
 import { AdminCampaignComponent } from './adminpage/admin-campaign/admin-campaign.component';
 import { AdminInfoComponent } from './adminpage/admin-info/admin-info.component';
 
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
+import { ThankyouComponent } from './thankyou/thankyou.component';  
 
 
 
@@ -57,7 +58,8 @@ import { CommonModule } from '@angular/common';
     AdminNavComponent,
     AdminMenuComponent,
     AdminCampaignComponent,
-    AdminInfoComponent,   
+    AdminInfoComponent,
+    ThankyouComponent,   
     
   ],
   imports: [

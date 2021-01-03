@@ -15,6 +15,7 @@ import {DonateComponent} from './donate/donate.component';
 import {AdminpageComponent} from './adminpage/adminpage.component';
 import { AdminCampaignComponent } from './adminpage/admin-campaign/admin-campaign.component';
 import { AdminInfoComponent } from './adminpage/admin-info/admin-info.component';
+import {ThankyouComponent} from './thankyou/thankyou.component';
 
 
 
@@ -79,6 +80,10 @@ const routes: Routes = [
   {
     path: 'info',
     component: AdminInfoComponent
+  },
+  {
+    path: 'thankyou',
+    component: ThankyouComponent
   }
 
   
